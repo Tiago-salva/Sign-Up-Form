@@ -28,7 +28,7 @@
         </p>
     </header>
 
-    <form action="#" method="get">
+    <form action="#" method="get" id="myForm">
 
         <div class="subtitle-container">
             <h1 class="subtitle">Welcome!</h1>
@@ -37,33 +37,39 @@
         <div class="inputs-container">
 
             <div class="form-input">
-                <input id="first-name" name="first-name" type="text" required>
+                <input id="first-name" class="name" name="first-name" type="text" required>
                 <label class="label-input" for="first-name">Name</label>
+                <div class="error-message" id="error-1"></div>
             </div>
 
             <div class="form-input">
-                <input id="last-name" name="last-name" type="text" required>
+                <input id="last-name" class="name" name="last-name" type="text" required>
                 <label class="label-input" for="last-name">Last Name</label>
+                <div class="error-message" id="error-2"></div>
             </div>
 
             <div class="form-input">
                 <input id="email" name="email" type="email" required>
                 <label class="label-input" for="email">Email</label>
+                <div class="error-message" id="error-3"></div>
             </div>
 
             <div class="form-input">
-                <input id="phone-number" name="phone-number" type="number" required>
+                <input id="phone-number" name="phone-number" type="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required title="Please enter a valid number with 10 digits">
                 <label class="label-input" for="phone-number">Phone Number</label>
+                <div class="error-message" id="error-4"></div>
             </div>
 
             <div class="form-input">
                 <input id="user-pwd" name="user-pwd" type="password" required>
                 <label class="label-input" for="user-pwd">Password</label>
+                <div class="error-message" id="error-5"></div>
             </div>
 
             <div class="form-input">
                 <input id="user-pwd-confirm" name="user-pwd-confirm" type="password" required>
                 <label class="label-input" for="user-pwd-confirm">Confirm Password</label>
+                <div class="error-message" id="error-6"></div>
             </div>
 
         </div>
@@ -75,6 +81,8 @@
         <p class="log-in-container">Already have an account? <a href="#">Log in</a> </p>
 
     </form>
+
+    <script src="script.js"></script>
 
 </body>
 
